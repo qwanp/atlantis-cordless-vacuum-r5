@@ -1,0 +1,201 @@
+{
+  "schema": "atlantis-gallery-interactions/2",
+  "joints": [
+    {
+      "id": "head_pitch",
+      "node": "head_pitch_body",
+      "kind": "rotation",
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "label": "Head Pitch",
+      "limits": [
+        0.0,
+        1.3089969389957472
+      ]
+    },
+    {
+      "id": "head_yaw",
+      "node": "head_yaw_body",
+      "kind": "rotation",
+      "axis": [
+        0,
+        1,
+        0
+      ],
+      "label": "Head Yaw",
+      "limits": [
+        -0.9599310885968813,
+        0.9599310885968813
+      ]
+    },
+    {
+      "id": "brush_roll",
+      "node": "brush_roll_body",
+      "kind": "spin",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "label": "Brush Roll"
+    },
+    {
+      "id": "wheel_left",
+      "node": "wheel_left_body",
+      "kind": "spin",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "label": "Left Wheel"
+    },
+    {
+      "id": "wheel_right",
+      "node": "wheel_right_body",
+      "kind": "spin",
+      "axis": [
+        1,
+        0,
+        0
+      ],
+      "label": "Right Wheel"
+    },
+    {
+      "id": "bin_lid",
+      "node": "bin_lid_body",
+      "kind": "rotation",
+      "axis": [
+        -1,
+        0,
+        0
+      ],
+      "label": "Dust Bin Lid",
+      "limits": [
+        0.0,
+        1.9198621771937625
+      ]
+    }
+  ],
+  "buttons": [
+    {
+      "id": "bin_lid_toggle",
+      "label": "Open / Close Bin Lid",
+      "actions": [
+        {
+          "type": "toggle",
+          "joint": "bin_lid",
+          "values": [
+            0,
+            1.9198621771937625
+          ]
+        }
+      ]
+    },
+    {
+      "id": "brush_roll_start",
+      "label": "Start Brush Roll",
+      "actions": [
+        {
+          "type": "spin",
+          "joint": "brush_roll",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "brush_roll_stop",
+      "label": "Stop Brush Roll",
+      "actions": [
+        {
+          "type": "spin",
+          "joint": "brush_roll",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "wheel_left_start",
+      "label": "Start Left Wheel",
+      "actions": [
+        {
+          "type": "spin",
+          "joint": "wheel_left",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "wheel_left_stop",
+      "label": "Stop Left Wheel",
+      "actions": [
+        {
+          "type": "spin",
+          "joint": "wheel_left",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "wheel_right_start",
+      "label": "Start Right Wheel",
+      "actions": [
+        {
+          "type": "spin",
+          "joint": "wheel_right",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "id": "wheel_right_stop",
+      "label": "Stop Right Wheel",
+      "actions": [
+        {
+          "type": "spin",
+          "joint": "wheel_right",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "reset_pose",
+      "label": "Reset Pose",
+      "actions": [
+        {
+          "type": "set",
+          "joint": "head_pitch",
+          "value": 0
+        },
+        {
+          "type": "set",
+          "joint": "head_yaw",
+          "value": 0
+        },
+        {
+          "type": "spin",
+          "joint": "brush_roll",
+          "value": 0
+        },
+        {
+          "type": "spin",
+          "joint": "wheel_left",
+          "value": 0
+        },
+        {
+          "type": "spin",
+          "joint": "wheel_right",
+          "value": 0
+        },
+        {
+          "type": "set",
+          "joint": "bin_lid",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}
